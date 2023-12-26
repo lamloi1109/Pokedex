@@ -1,7 +1,7 @@
 import { NEXT_CACHE_REVALIDATE_TAG_TOKEN_HEADER } from "next/dist/lib/constants";
 import { pokemon } from "./definitions";
 
-export async function fetchPokemonList(limit = 3) {
+export async function fetchPokemonList(limit = 20) {
     try {
         const data = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
         const result = await data.json();
